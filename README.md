@@ -8,7 +8,7 @@
 AI Notes Summarizer automatically summarizes long notes into concise, readable formats using AI/NLP.  
 - **Frontend:** React.js (Vercel)  
 - **Backend:** Node.js/Express (Render)  
-- **AI Engine:** OpenAI GPT API  
+- **AI Engine:** API  
 
 ---
 
