@@ -28,7 +28,7 @@ AI Notes Summarizer automatically summarizes long notes into concise, readable f
 ---
 
 ## 🛠 Technologies
-React, Node.js, Express, OpenAI GPT API, Vercel, Render
+React, Node.js, Express, API, Vercel, Render
 
 ---
 
