@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Notes Summarizer Design System - Modern, Clean, Minimal */
+
+@layer base {
+  :root {
+    /* Brand Colors - Soft Purple/Blue Gradient Theme */
+    --background: 240 100% 99%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Primary - Soft Purple Gradient */
+    --primary: 250 84% 54%;
+    --primary-glow: 260 100% 80%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Purple */
+    --secondary: 250 40% 96%;
+    --secondary-foreground: 250 20% 25%;
+
+    /* Muted - Soft Gray */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 8% 55%;
+
+    /* Accent - Soft Green for Success */
+    --accent: 142 76% 70%;
+    --accent-glow: 142 50% 85%;
+    --accent-foreground: 142 50% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 12% 92%;
+    --input: 240 12% 92%;
+    --ring: 250 84% 54%;
+
+    --radius: 12px;
+
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 16px -2px hsl(var(--foreground) / 0.08);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 15% 6%;
+    --foreground: 240 15% 95%;
+
+    --card: 240 15% 8%;
+    --card-foreground: 240 15% 95%;
+
+    --popover: 240 15% 8%;
+    --popover-foreground: 240 15% 95%;
+
+    --primary: 250 84% 64%;
+    --primary-glow: 260 100% 85%;
+    --primary-foreground: 240 15% 6%;
+
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 240 15% 90%;
+
+    --muted: 240 8% 12%;
+    --muted-foreground: 240 8% 65%;
+
+    --accent: 142 76% 60%;
+    --accent-glow: 142 50% 75%;
+    --accent-foreground: 240 15% 6%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 240 15% 95%;
+
+    --border: 240 12% 18%;
+    --input: 240 12% 18%;
+    --ring: 250 84% 64%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Smooth focus transitions */
+  input:focus,
+  textarea:focus,
+  button:focus {
+    transition: var(--transition-smooth);
+  }
+}
